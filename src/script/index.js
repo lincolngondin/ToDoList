@@ -21,9 +21,10 @@ const a = document.querySelector('.button-add');
 
 a.addEventListener('click',()=>{
 	let id = Math.random().toString(36).slice(2, 10);
+	let data = new Date();
 	Armazenamento.setData(`${id}`, JSON.stringify({
 		content: document.querySelector('.input').value,
-		createdAt: new Date(),
+		createdAt: data,
 		id: id
 	}));
 	updateTaskViewer();
