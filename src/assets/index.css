@@ -1,12 +1,15 @@
 *{
 	margin: 0;
 	padding: 0;
-
+	font-family: monospace;
 }
 html{
 	height: 100%;
 }
 body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	min-height: 100%;
 }
 .task__date{
@@ -14,6 +17,57 @@ body{
 	font-weight: bolder;
 	color: gray;
 }
+.task__content{
+	font-size: 2rem;
+}
+.task__delete{
+	padding: 2px;
+	background-color: red;
+	color: white;
+	font-weight: bolder;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
 .task{
-	background: oldlace;
+	background: black;
+	color: white;
+	width: 95vw;
+	margin: .2em;
+	padding: 5px;
+	position: relative;
+	min-height: 2rem;
+	overflow: auto;
+}
+.task__viewer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.task__input{
+	padding: 5px;
+	display: flex;
+}
+.input{
+	padding: .2em .3em;
+	border: 1px solid black;
+}
+.main{
+	margin-bottom: auto;
+}
+.footer, .header{
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 1em;
+}
+a{
+	color: white;
+}
+.button-add{
+	background-color: lightgreen;
+	border: 1px solid black;
+	font-weight: bolder;
+	padding: 0 1em;
 }

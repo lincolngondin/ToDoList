@@ -16,7 +16,6 @@ class StorageManager{
 const Armazenamento = new StorageManager;
 
 const a = document.querySelector('.button-add');
-console.log(a)
 
 
 
@@ -42,8 +41,9 @@ function createTask(obj){
 	let div = document.createElement('div');
 	div.setAttribute('class', 'task');
 	div.innerHTML = `
-		<p>${obj.content}  <span class="task__date">${obj.createdAt}</span></p>
-		<button onclick=deletarTask('${obj.id}')>delete</button>
+		<p class="task__content">${obj.content}</p>  
+		<p class="task__date">${obj.createdAt}</p>
+		<button class="task__delete" onclick=deletarTask('${obj.id}')>DELETAR</button>
 	`
 	return div;
 }
