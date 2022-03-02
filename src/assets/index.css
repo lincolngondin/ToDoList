@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+}
+.task__date{
+	font-size: .5rem;
+	font-weight: bolder;
+	color: gray;
+}
+.task{
+	background: oldlace;
+}
