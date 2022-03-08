@@ -17,9 +17,7 @@ const Armazenamento = new StorageManager;
 
 const a = document.querySelector('.button-add');
 
-
-
-a.addEventListener('click',()=>{
+function addNote(){
 	let id = Math.random().toString(36).slice(2, 10);
 	let data = new Date();
 	Armazenamento.setData(`${id}`, JSON.stringify({
@@ -27,9 +25,17 @@ a.addEventListener('click',()=>{
 		createdAt: data,
 		id: id
 	}));
+	document.querySelector(".input").value = '';
 	updateTaskViewer();
+}
+
+a.addEventListener('click',()=>{
+	addNote();
 })
 
+a.onsubmit = ()=>{
+	addNote();
+}
 
 
 function deletarTask(id){
@@ -58,4 +64,4 @@ function updateTaskViewer(){
 	})
 }
 
-
+updateTaskViewer();
